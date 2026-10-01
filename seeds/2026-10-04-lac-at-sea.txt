@@ -1,0 +1,11 @@
+source: nfl_game_predictor
+date: 2026-10-04
+away: LAC
+home: SEA
+home_win_prob: 0.554114
+predicted_points: 41.465942
+spread_line: 7
+total_line: 42.5
+lean: no_lean
+line: recorded schedule line, not a live book price, not a bet
+these numbers are from nfl_game_predictor and are not a bet.

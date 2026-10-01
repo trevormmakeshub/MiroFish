@@ -1,0 +1,11 @@
+source: nfl_game_predictor
+date: 2026-10-04
+away: DET
+home: CAR
+home_win_prob: 0.371095
+predicted_points: 55.553695
+spread_line: -3.5
+total_line: 51.5
+lean: lean_over
+line: recorded schedule line, not a live book price, not a bet
+these numbers are from nfl_game_predictor and are not a bet.

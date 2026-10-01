@@ -1,0 +1,11 @@
+source: nfl_game_predictor
+date: 2026-10-04
+away: NE
+home: BUF
+home_win_prob: 0.561981
+predicted_points: 42.756903
+spread_line: 6.5
+total_line: 48.5
+lean: lean_under
+line: recorded schedule line, not a live book price, not a bet
+these numbers are from nfl_game_predictor and are not a bet.

@@ -1,0 +1,11 @@
+source: nfl_game_predictor
+date: 2026-10-04
+away: TEN
+home: BAL
+home_win_prob: 0.57792
+predicted_points: 41.420062
+spread_line: 11.5
+total_line: 42.5
+lean: no_lean
+line: recorded schedule line, not a live book price, not a bet
+these numbers are from nfl_game_predictor and are not a bet.

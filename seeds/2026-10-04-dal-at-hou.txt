@@ -1,0 +1,11 @@
+source: nfl_game_predictor
+date: 2026-10-04
+away: DAL
+home: HOU
+home_win_prob: 0.587455
+predicted_points: 54.100597
+spread_line: 3
+total_line: 48.5
+lean: lean_over
+line: recorded schedule line, not a live book price, not a bet
+these numbers are from nfl_game_predictor and are not a bet.

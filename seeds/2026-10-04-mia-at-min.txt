@@ -1,0 +1,11 @@
+source: nfl_game_predictor
+date: 2026-10-04
+away: MIA
+home: MIN
+home_win_prob: 0.61917
+predicted_points: 36.418681
+spread_line: 10.5
+total_line: 38.5
+lean: no_lean
+line: recorded schedule line, not a live book price, not a bet
+these numbers are from nfl_game_predictor and are not a bet.

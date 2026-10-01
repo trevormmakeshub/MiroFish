@@ -1,0 +1,11 @@
+source: nfl_game_predictor
+date: 2026-10-04
+away: DEN
+home: SF
+home_win_prob: 0.494433
+predicted_points: 44.588939
+spread_line: 3
+total_line: 47.5
+lean: no_lean
+line: recorded schedule line, not a live book price, not a bet
+these numbers are from nfl_game_predictor and are not a bet.

@@ -1,0 +1,11 @@
+source: nfl_game_predictor
+date: 2026-10-04
+away: GB
+home: TB
+home_win_prob: 0.431731
+predicted_points: 37.303367
+spread_line: -3.5
+total_line: 38.5
+lean: no_lean
+line: recorded schedule line, not a live book price, not a bet
+these numbers are from nfl_game_predictor and are not a bet.
