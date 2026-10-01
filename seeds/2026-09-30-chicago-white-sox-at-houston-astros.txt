@@ -1,0 +1,9 @@
+date: 2026-09-30
+away: Chicago White Sox
+home: Houston Astros
+starter_away: Sean Burke
+starter_home: Hunter Brown
+home_win_prob: 0.5740
+predicted_away_runs: 3.88
+predicted_home_runs: 4.73
+these numbers are from the 2026 box-score model and are not a bet.
