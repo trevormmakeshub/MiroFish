@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-19
+away: Athletics
+home: Los Angeles Angels
+hometeam: LAA
+hometeamodds: 0.303
+awayteam: ATH
+awayteamodds: 0.697
+meanrundiff: -0.05
+homerollingdiff: -1.8
+homerollingruns: 1.3
+awayrollingruns: 3.3
+these numbers are from that repo's model and are not a bet.

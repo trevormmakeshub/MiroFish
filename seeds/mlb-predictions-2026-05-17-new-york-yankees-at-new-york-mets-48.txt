@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-17
+away: New York Yankees
+home: New York Mets
+hometeam: NYM
+hometeamodds: 0.578
+awayteam: NYY
+awayteamodds: 0.422
+meanrundiff: -0.5
+homerollingdiff: 0.2
+homerollingruns: 2.0
+awayrollingruns: 1.4
+these numbers are from that repo's model and are not a bet.

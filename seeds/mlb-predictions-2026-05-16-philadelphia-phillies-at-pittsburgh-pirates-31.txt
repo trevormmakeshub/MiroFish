@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-16
+away: Philadelphia Phillies
+home: Pittsburgh Pirates
+hometeam: PIT
+hometeamodds: 0.533
+awayteam: PHI
+awayteamodds: 0.467
+meanrundiff: 0.1
+homerollingdiff: 0.4
+homerollingruns: 3.2
+awayrollingruns: 2.6
+these numbers are from that repo's model and are not a bet.

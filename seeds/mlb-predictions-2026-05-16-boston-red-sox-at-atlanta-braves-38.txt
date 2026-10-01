@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-16
+away: Boston Red Sox
+home: Atlanta Braves
+hometeam: ATL
+hometeamodds: 0.567
+awayteam: BOS
+awayteamodds: 0.433
+meanrundiff: 0.6
+homerollingdiff: 1.2
+homerollingruns: 2.5
+awayrollingruns: 1.5
+these numbers are from that repo's model and are not a bet.

@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-16
+away: Milwaukee Brewers
+home: Minnesota Twins
+hometeam: MIN
+hometeamodds: 0.415
+awayteam: MIL
+awayteamodds: 0.585
+meanrundiff: 0.45
+homerollingdiff: -0.3
+homerollingruns: 2.4
+awayrollingruns: 2.7
+these numbers are from that repo's model and are not a bet.

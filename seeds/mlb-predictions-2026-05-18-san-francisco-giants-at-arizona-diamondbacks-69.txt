@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-18
+away: San Francisco Giants
+home: Arizona Diamondbacks
+hometeam: AZ
+hometeamodds: 0.5
+awayteam: SF
+awayteamodds: 0.5
+meanrundiff: 0.0
+homerollingdiff: -0.0
+homerollingruns: 1.8
+awayrollingruns: 3.0
+these numbers are from that repo's model and are not a bet.

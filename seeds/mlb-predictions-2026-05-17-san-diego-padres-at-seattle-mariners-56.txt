@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-17
+away: San Diego Padres
+home: Seattle Mariners
+hometeam: SEA
+hometeamodds: 0.561
+awayteam: SD
+awayteamodds: 0.439
+meanrundiff: 0.15
+homerollingdiff: 0.7
+homerollingruns: 3.0
+awayrollingruns: 1.5
+these numbers are from that repo's model and are not a bet.

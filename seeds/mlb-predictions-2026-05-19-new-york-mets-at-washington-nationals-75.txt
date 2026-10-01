@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-19
+away: New York Mets
+home: Washington Nationals
+hometeam: WSH
+hometeamodds: 0.522
+awayteam: NYM
+awayteamodds: 0.478
+meanrundiff: 0.4
+homerollingdiff: 0.6
+homerollingruns: 3.7
+awayrollingruns: 2.0
+these numbers are from that repo's model and are not a bet.

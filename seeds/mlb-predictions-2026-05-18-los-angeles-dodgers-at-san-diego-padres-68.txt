@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-18
+away: Los Angeles Dodgers
+home: San Diego Padres
+hometeam: SD
+hometeamodds: 0.556
+awayteam: LAD
+awayteamodds: 0.444
+meanrundiff: -0.9
+homerollingdiff: -0.4
+homerollingruns: 1.5
+awayrollingruns: 1.6
+these numbers are from that repo's model and are not a bet.

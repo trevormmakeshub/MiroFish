@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-14
+away: San Diego Padres
+home: Milwaukee Brewers
+hometeam: MIL
+hometeamodds: 0.589
+awayteam: SD
+awayteamodds: 0.411
+meanrundiff: 0.4
+homerollingdiff: 1.2
+homerollingruns: 2.7
+awayrollingruns: 1.5
+these numbers are from that repo's model and are not a bet.

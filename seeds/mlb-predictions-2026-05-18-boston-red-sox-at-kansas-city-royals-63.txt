@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-18
+away: Boston Red Sox
+home: Kansas City Royals
+hometeam: KC
+hometeamodds: 0.483
+awayteam: BOS
+awayteamodds: 0.517
+meanrundiff: -0.15
+homerollingdiff: -0.3
+homerollingruns: 2.7
+awayrollingruns: 1.5
+these numbers are from that repo's model and are not a bet.

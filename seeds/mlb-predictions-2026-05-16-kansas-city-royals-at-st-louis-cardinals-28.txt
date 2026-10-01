@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-16
+away: Kansas City Royals
+home: St. Louis Cardinals
+hometeam: STL
+hometeamodds: 0.528
+awayteam: KC
+awayteamodds: 0.472
+meanrundiff: -0.05
+homerollingdiff: 0.2
+homerollingruns: 2.0
+awayrollingruns: 2.7
+these numbers are from that repo's model and are not a bet.

@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-20
+away: Texas Rangers
+home: Colorado Rockies
+hometeam: COL
+hometeamodds: 0.455
+awayteam: TEX
+awayteamodds: 0.545
+meanrundiff: 0.2
+homerollingdiff: -0.2
+homerollingruns: 2.9
+awayrollingruns: 2.3
+these numbers are from that repo's model and are not a bet.

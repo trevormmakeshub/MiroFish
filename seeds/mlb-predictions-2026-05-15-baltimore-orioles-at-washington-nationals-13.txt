@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-15
+away: Baltimore Orioles
+home: Washington Nationals
+hometeam: WSH
+hometeamodds: 0.533
+awayteam: BAL
+awayteamodds: 0.467
+meanrundiff: 0.3
+homerollingdiff: 0.6
+homerollingruns: 3.7
+awayrollingruns: 1.9
+these numbers are from that repo's model and are not a bet.

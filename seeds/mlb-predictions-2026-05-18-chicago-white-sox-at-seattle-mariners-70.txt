@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-18
+away: Chicago White Sox
+home: Seattle Mariners
+hometeam: SEA
+hometeamodds: 0.55
+awayteam: CWS
+awayteamodds: 0.45
+meanrundiff: 0.25
+homerollingdiff: 0.7
+homerollingruns: 3.0
+awayrollingruns: 3.0
+these numbers are from that repo's model and are not a bet.

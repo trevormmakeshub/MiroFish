@@ -1,0 +1,13 @@
+source: mlb-predictions
+date: 2026-05-18
+away: Atlanta Braves
+home: Miami Marlins
+hometeam: MIA
+hometeamodds: 0.46
+awayteam: ATL
+awayteamodds: 0.54
+meanrundiff: 0.85
+homerollingdiff: 0.5
+homerollingruns: 2.8
+awayrollingruns: 2.5
+these numbers are from that repo's model and are not a bet.
