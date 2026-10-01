@@ -1,10 +1,11 @@
+source: mlb_2026-09-30_remaining_games.csv
 source: wc_2026-09-30_predictions.csv
 date: 2026-09-30
 away: Chicago Cubs
 home: San Diego Padres
 starter_away: Kevin Gausman
 starter_home: Nick Pivetta
-home_win_prob: 0.5512
-predicted_away_runs: 4.05
-predicted_home_runs: 4.33
+home_win_prob: 0.5524
+predicted_away_runs: 4.06
+predicted_home_runs: 4.34
 these numbers are from mlb_game_predictor and are not a bet.
