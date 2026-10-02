@@ -1,0 +1,2 @@
+date,away,home,home_win_prob,spread_line,total_line,lean,live_score,source
+2026-10-01,Philadelphia Phillies,Atlanta Braves,,,,,,trevormmakeshub/mlb_game_predictor artifacts/seeds.csv
