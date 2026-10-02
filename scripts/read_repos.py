@@ -2,7 +2,7 @@
 
 On each run this reads the sibling repos. It does not paste a saved copy.
 It does not train. It does not price a prop. It does not copy a roster row.
-It does not run on a timer. The only live request is one NFL scoreboard call.
+It does not run on a timer. Each run makes one NFL scoreboard request and one MLB scoreboard request.
 """
 
 from __future__ import annotations
@@ -22,8 +22,11 @@ MLB_SEEDS = GROK / "mlb_game_predictor" / "artifacts" / "seeds.csv"
 SEEDS = MIRO / "seeds"
 NFL_OUT = SEEDS / "nfl_current.csv"
 MLB_OUT = SEEDS / "mlb_current.csv"
-ESPN_OUT = MIRO / "data" / "live" / "espn_scoreboard.json"
-ESPN_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+NFL_LIVE = MIRO / "data" / "live" / "espn_scoreboard.json"
+MLB_LIVE = MIRO / "data" / "live" / "espn_mlb_scoreboard.json"
+MLB_STATUS = MIRO / "data" / "live" / "espn_mlb_status.txt"
+NFL_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+MLB_URL = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"
 CUTOFF = "2026-10-01"
 COLUMNS = [
     "date",
@@ -49,11 +52,11 @@ def cell(row: dict[str, str], key: str) -> str:
     return (row.get(key) or "").strip()
 
 
-def fetch_scoreboard() -> tuple[str, dict | None]:
-    """One scoreboard request. A non-200 status is recorded and the run continues."""
-    ESPN_OUT.parent.mkdir(parents=True, exist_ok=True)
+def fetch_scoreboard(url: str, dest: Path, label: str) -> tuple[str, dict | None]:
+    """One scoreboard request. A non-200 status is saved and the run continues."""
+    dest.parent.mkdir(parents=True, exist_ok=True)
     request = urllib.request.Request(
-        ESPN_URL,
+        url,
         headers={"Accept": "application/json", "User-Agent": "mirofish-read/1.0"},
     )
     try:
@@ -63,18 +66,23 @@ def fetch_scoreboard() -> tuple[str, dict | None]:
     except urllib.error.HTTPError as exc:
         status = str(exc.code)
         body = exc.read()
-        ESPN_OUT.write_bytes(body)
-        print(f"espn_status {status}")
+        dest.write_bytes(body)
+        print(f"{label} {status}")
         return status, None
     except Exception as exc:
         status = f"{type(exc).__name__} {exc}"
-        print(f"espn_status {status}")
+        print(f"{label} {status}")
         return status, None
-    ESPN_OUT.write_bytes(body)
-    print(f"espn_status {status}")
+    dest.write_bytes(body)
+    print(f"{label} {status}")
     if status != "200":
         return status, None
-    return status, json.loads(body.decode("utf-8"))
+    try:
+        payload = json.loads(body.decode("utf-8"))
+    except json.JSONDecodeError as exc:
+        print(f"{label} json {exc}")
+        return status, None
+    return status, payload
 
 
 def scoreboard_events(payload: dict | None) -> list[dict[str, str]]:
@@ -85,24 +93,43 @@ def scoreboard_events(payload: dict | None) -> list[dict[str, str]]:
         competitions = event.get("competitions") or []
         if not competitions:
             continue
-        sides: dict[str, tuple[str, str]] = {}
+        sides: dict[str, tuple[str, str, str]] = {}
         for side in competitions[0].get("competitors") or []:
             team = side.get("team") or {}
             score = side.get("score")
             sides[side.get("homeAway") or ""] = (
                 str(team.get("abbreviation") or ""),
                 "" if score is None else str(score),
+                str(team.get("displayName") or ""),
             )
         if "away" in sides and "home" in sides:
             events.append(
                 {
                     "away_abbr": sides["away"][0],
                     "away_score": sides["away"][1],
+                    "away_name": sides["away"][2],
                     "home_abbr": sides["home"][0],
                     "home_score": sides["home"][1],
+                    "home_name": sides["home"][2],
                 }
             )
     return events
+
+
+def named_live_score(events: list[dict[str, str]], away: str, home: str) -> str:
+    hits = [
+        event
+        for event in events
+        if away in {event["away_abbr"], event["away_name"]}
+        and home in {event["home_abbr"], event["home_name"]}
+    ]
+    if len(hits) != 1:
+        return ""
+    chosen = hits[0]
+    return (
+        f"{chosen['away_abbr']} {chosen['away_score']}, "
+        f"{chosen['home_abbr']} {chosen['home_score']}"
+    )
 
 
 def live_score(events: list[dict[str, str]], away: str, home: str) -> str:
@@ -176,8 +203,11 @@ def main() -> None:
     mlb_rows = read_rows(MLB_SEEDS)
     roster_rows_copied = 0
 
-    status, payload = fetch_scoreboard()
-    events = scoreboard_events(payload)
+    nfl_status, nfl_payload = fetch_scoreboard(NFL_URL, NFL_LIVE, "espn_status")
+    mlb_status, mlb_payload = fetch_scoreboard(MLB_URL, MLB_LIVE, "mlb_espn_status")
+    MLB_STATUS.write_text(mlb_status + "\n", encoding="utf-8")
+    events = scoreboard_events(nfl_payload)
+    mlb_events = scoreboard_events(mlb_payload)
 
     nfl_out = []
     for row in next_games:
@@ -216,7 +246,7 @@ def main() -> None:
                 "spread_line": cell(row, "spread_line"),
                 "total_line": cell(row, "total_line"),
                 "lean": cell(row, "lean"),
-                "live_score": live_score(events, away, home),
+                "live_score": named_live_score(mlb_events, away, home),
                 "source": MLB_SOURCE,
             }
         )
