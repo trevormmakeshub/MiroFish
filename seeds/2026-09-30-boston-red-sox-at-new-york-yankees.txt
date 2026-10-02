@@ -1,9 +1,0 @@
-source: mlb_game_predictor
-date: 2026-09-30
-away: Boston Red Sox
-home: New York Yankees
-home_win_prob: 0.5578
-predicted_away_runs: 4.14
-predicted_home_runs: 4.13
-line: not a bet
-these numbers are from mlb_game_predictor and are not a bet.

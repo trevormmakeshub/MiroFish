@@ -1,0 +1,8 @@
+source: mlb_game_predictor
+date: 2026-10-01
+away: Philadelphia Phillies
+home: Atlanta Braves
+home_win_prob:
+line: not a bet
+reason: October 1 schedule status is Live / In Progress and the response has no probable pitchers, so the saved model cannot score it.
+these numbers are from mlb_game_predictor and are not a bet.
