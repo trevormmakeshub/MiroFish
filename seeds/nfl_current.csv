@@ -1,17 +1,2 @@
 date,away,home,home_win_prob,spread_line,total_line,lean,live_score,source
-2026-10-01,PIT,CLE,0.344545,-2.5,38.5,no_lean,"PIT 10, CLE 21",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,ARI,NYG,0.521968,-2.5,44.5,lean_over,"ARI 0, NYG 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,DAL,HOU,0.587455,3,48.5,lean_over,"DAL 0, HOU 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,DEN,SF,0.494433,3,47.5,no_lean,"DEN 0, SF 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,DET,CAR,0.371095,-3.5,51.5,lean_over,"DET 0, CAR 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,GB,TB,0.445397,-3.5,38.5,no_lean,"GB 0, TB 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,IND,WAS,0.36553,-3.5,47.5,lean_over,"IND 0, WSH 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,JAX,CIN,0.499045,2.5,51.5,no_lean,"JAX 0, CIN 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,KC,LV,0.323706,-4.5,47.5,no_lean,"KC 0, LV 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,LAC,SEA,0.554114,7,42.5,no_lean,"LAC 0, SEA 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,LA,PHI,0.56151,-3,43.5,lean_over,"LAR 0, PHI 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,MIA,MIN,0.61917,10.5,38.5,no_lean,"MIA 0, MIN 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,NE,BUF,0.561981,6.5,48.5,lean_under,"NE 0, BUF 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,NYJ,CHI,0.544158,3.5,43.5,no_lean,"NYJ 0, CHI 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-04,TEN,BAL,0.57792,11.5,42.5,no_lean,"TEN 0, BAL 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
-2026-10-05,ATL,NO,0.453828,2.5,47.5,no_lean,"ATL 0, NO 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
+2026-10-05,ATL,NO,0.458869,1.5,47.5,no_lean,"ATL 0, NO 0",trevormmakeshub/nfl_game_predictor artifacts/nfl_next_games.csv
